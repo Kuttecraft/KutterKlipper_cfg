@@ -5,8 +5,8 @@ set -e
 SOURCE_IMPRESORAS="$HOME/KutterKlipper_cfg/IMPRESORAS"
 MACROS_SRC="$HOME/KutterKlipper_cfg/macros_kuttercraft.cfg"
 COMANDO_SRC="$HOME/KutterKlipper_cfg/comando_sistema.cfg"
-KLIPPER_CONF_SRC="$SOURCE_IMPRESORAS/KlipperScreen.conf"
-KLIPPER_CONF_DEST="/home/kutter/.config/KlipperScreen/KlipperScreen.conf"
+KLIPPER_CONF_SRC="$HOME/KutterKlipper_cfg/KlipperScreen.conf"
+KLIPPER_CONF_DEST="$HOME/.config/KlipperScreen/KlipperScreen.conf"
 
 # Verificar que las fuentes existen
 if [ ! -d "$SOURCE_IMPRESORAS" ]; then
