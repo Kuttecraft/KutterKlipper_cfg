@@ -54,7 +54,11 @@ if [ -d "$DEST_THEME_KUTTERCRAFT" ]; then
 fi
 echo "[INFO] Copiando $SOURCE_THEME_KUTTERCRAFT → $DEST_THEME_KUTTERCRAFT"
 cp -r "$SOURCE_THEME_KUTTERCRAFT" "$DEST_THEME_KUTTERCRAFT"
-chmod -R 644 "$DEST_THEME_KUTTERCRAFT"
+
+# Corregir permisos de propiedad y escritura
+chown -R "$USER:$USER" "$DEST_THEME_KUTTERCRAFT"
+chmod -R u+rwX "$DEST_THEME_KUTTERCRAFT"
+
 
 echo "[INFO] Reemplazando carpetas 'impresoras' con enlaces simbólicos..."
 for BASE in "${BASES[@]}"; do
