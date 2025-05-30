@@ -9,6 +9,7 @@ MACROS_SRC="$HOME/KutterKlipper_cfg/macros_kuttercraft.cfg"
 COMANDO_SRC="$HOME/KutterKlipper_cfg/comando_sistema.cfg"
 KLIPPER_CONF_SRC="$HOME/KutterKlipper_cfg/KlipperScreen.conf"
 KLIPPER_CONF_DEST="$HOME/.config/KlipperScreen/KlipperScreen.conf"
+DEST_THEME_KUTTERCRAFT="$HOME/KlipperScreen/styles/kuttercraft"
 
 # Verificar que las fuentes existen
 if [ ! -d "$SOURCE_IMPRESORAS" ]; then
@@ -44,6 +45,17 @@ BASES=(
   "$HOME/printer_4_data/config"
 )
 
+echo "[INFO] Reemplazando carpeta de estilo kuttercraft..."
+if [ -d "$DEST_THEME_KUTTERCRAFT" ]; then
+  echo "[INFO] Eliminando carpeta existente: $DEST_THEME_KUTTERCRAFT"
+  chattr -i -R "$DEST_THEME_KUTTERCRAFT" 2>/dev/null || true
+  chmod -R u+rwX "$DEST_THEME_KUTTERCRAFT" 2>/dev/null || true
+  rm -rf "$DEST_THEME_KUTTERCRAFT"
+fi
+echo "[INFO] Copiando $SOURCE_THEME_KUTTERCRAFT → $DEST_THEME_KUTTERCRAFT"
+cp -r "$SOURCE_THEME_KUTTERCRAFT" "$DEST_THEME_KUTTERCRAFT"
+chmod -R 644 "$DEST_THEME_KUTTERCRAFT"
+
 echo "[INFO] Reemplazando carpetas 'impresoras' con enlaces simbólicos..."
 for BASE in "${BASES[@]}"; do
   DEST_IMPRESORAS="$BASE/impresoras"
@@ -65,21 +77,6 @@ for BASE in "${BASES[@]}"; do
   echo "[INFO] Creando enlace: $DEST_THEME → $SOURCE_THEME"
   ln -s "$SOURCE_THEME" "$DEST_THEME"
 done
-
-echo "[INFO] Reemplazando carpetas 'kuttercraft' con enlaces simbólicos..."
-
-DEST_KUTTERCRAFT="$HOME/KlipperScreen/styles/kuttercraft"
-  
-if [ -d "$DEST_KUTTERCRAFT" ] || [ -L "$DEST_KUTTERCRAFT" ]; then
-  echo "[INFO] Eliminando carpeta existente: $DEST_KUTTERCRAFT"
-  rm -rf "$DEST_KUTTERCRAFT"
-fi
-
-echo "[INFO] Copiando $SOURCE_THEME_KUTTERCRAFT → $DEST_KUTTERCRAFT"
-cp -r "$SOURCE_THEME_KUTTERCRAFT" "$DEST_KUTTERCRAFT"
-chmod -R 644 "$DEST_KUTTERCRAFT"
-
-
 
 echo "[INFO] Reemplazando archivos 'macros_kuttercraft.cfg'..."
 for BASE in "${BASES[@]}"; do
