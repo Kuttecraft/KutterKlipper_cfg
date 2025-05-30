@@ -2,7 +2,7 @@
 
 set -e
 
-SOURCE_PATH="$HOME/KutterKlipper_cfg/impresoras"
+SOURCE_PATH="$HOME/KutterKlipper_cfg/IMPRESORAS"
 MACROS_SRC="$HOME/KutterKlipper_cfg/macros_kuttercraft.cfg"
 
 # Verificamos que la carpeta de origen existe
