@@ -8,7 +8,9 @@ MACROS_SRC="$HOME/KutterKlipper_cfg/macros_kuttercraft.cfg"
 COMANDO_SRC="$HOME/KutterKlipper_cfg/comando_sistema.cfg"
 KLIPPER_CONF_SRC="$HOME/KutterKlipper_cfg/KlipperScreen.conf"
 KLIPPER_CONF_DEST="$HOME/.config/KlipperScreen/KlipperScreen.conf"
-#DEST_THEME_KUTTERCRAFT="$HOME/KlipperScreen/styles/kuttercraft"
+DEST_THEME_KUTTERCRAFT="$HOME/KlipperScreen/styles/kuttercraft"
+SOURCE_THEME_KUTTERCRAFT="$HOME/KutterKlipper_cfg/theme/kuttercraft"
+SOURCE_DIR_THEME_KUTTERCRAFT="$HOME/KlipperScreen/styles/"
 
 # Verificar que las fuentes existen
 if [ ! -d "$SOURCE_IMPRESORAS" ]; then
@@ -39,19 +41,19 @@ BASES=(
   "$HOME/printer_4_data/config"
 )
 
-#echo "[INFO] Reemplazando carpeta de estilo kuttercraft..."
-#if [ -d "$DEST_THEME_KUTTERCRAFT" ]; then
-#  echo "[INFO] Eliminando carpeta existente: $DEST_THEME_KUTTERCRAFT"
-#  chattr -i -R "$DEST_THEME_KUTTERCRAFT" 2>/dev/null || true
-#  chmod -R u+rwX "$DEST_THEME_KUTTERCRAFT" 2>/dev/null || true
-#  rm -rf "$DEST_THEME_KUTTERCRAFT"
-#fi
-#echo "[INFO] Copiando $SOURCE_THEME_KUTTERCRAFT → $DEST_THEME_KUTTERCRAFT"
-#cp -r "$SOURCE_THEME_KUTTERCRAFT" "$DEST_THEME_KUTTERCRAFT"
+echo "[INFO] Reemplazando carpeta de estilo kuttercraft..."
+if [ -d "$DEST_THEME_KUTTERCRAFT" ]; then
+  echo "[INFO] Eliminando carpeta existente: $DEST_THEME_KUTTERCRAFT"
+  chattr -i -R "$DEST_THEME_KUTTERCRAFT" 2>/dev/null || true
+  chmod -R u+rwX "$DEST_THEME_KUTTERCRAFT" 2>/dev/null || true
+  rm -rf "$DEST_THEME_KUTTERCRAFT"
+fi
+echo "[INFO] Copiando $SOURCE_THEME_KUTTERCRAFT → $SOURCE_DIR_THEME_KUTTERCRAFT"
+cp -r "$SOURCE_THEME_KUTTERCRAFT" "$SOURCE_DIR_THEME_KUTTERCRAFT"
 
-## Corregir permisos de propiedad y escritura
-#chown -R "$USER:$USER" "$DEST_THEME_KUTTERCRAFT"
-#chmod -R u+rwX "$DEST_THEME_KUTTERCRAFT"
+# Corregir permisos de propiedad y escritura
+chown -R "$USER:$USER" "$DEST_THEME_KUTTERCRAFT"
+chmod -R u+rwX "$DEST_THEME_KUTTERCRAFT"
 
 
 echo "[INFO] Reemplazando carpetas 'impresoras' con enlaces simbólicos..."
