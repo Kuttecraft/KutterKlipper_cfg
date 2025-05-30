@@ -1,0 +1,262 @@
+canvas.webcamImage {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.theme--dark.v-btn--active:focus:before {
+    opacity: 1;
+}
+.v-item-group.theme--dark.v-btn-toggle.v-btn-toggle--dense {
+    background-color: #00000040 !important;
+}
+button.btnMinWidthAuto.flex-grow-1.px-0.v-btn.v-btn--is-elevated.v-btn--has-bg.theme--dark.v-size--default {
+    background: transparent;
+}
+.v-toolbar__content .v-btn.v-btn--icon.v-size--default, .v-toolbar__extension .v-btn.v-btn--icon.v-size--default {
+    border-radius: 10px;
+}
+.v-ripple__animation--in {
+    transition: all 0.2s cubic-bezier(0, 1, 1, 0);
+}
+.v-ripple__animation {
+    border-radius: inherit !important;
+    background: #282828 !important;
+}
+
+.v-image.v-responsive.d-flex.align-end.statusPanel-big-thumbnail.theme--dark {
+    background-color: rgba(50, 50, 50, 0.2) !important;
+}
+
+.v-tooltip__content.tooltip__content-opacity1{
+    background-color: rgba(20, 20, 20, 0.9) !important;
+}
+html {
+    scrollbar-color: #585454 #27272780 !important;
+}
+.v-item-group.theme--dark.v-btn-toggle.v-btn-toggle--dense {
+    background: transparent;
+}
+main#content {
+    background-color: hsl(60.23deg 1.37% 31.07%) !important;
+    background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+
+    /*background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%) !important;*/
+    /*background-image: linear-gradient(to top, #09203f 0%, #537895 100%) !important;*/
+    /*background-image: linear-gradient(to right, #434343 0%, black 100%) !important;*/
+    /*background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%) !important;*/
+  
+}
+
+/*menu de configuraciones*/
+.v-dialog.v-dialog--active,
+.v-card.v-sheet.theme--dark.panel.settings-menu-dialog,
+.v-menu__content.theme--dark.menuable__content__active {
+    background-color: hsl(60.23deg 1.37% 31.07%) !important;
+    background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+    /*
+    background-color: hsl(217deg 3.4% 34.41%) !important;
+    background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%) !important;
+    */
+    /*
+    background-color: hsl(60.23deg 1.37% 31.07%) !important;
+    background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+    *?
+    /*
+    background-image: radial-gradient(at 3% 24%, hsl(0deg 0% 13.53% / 19%) 0px, transparent 50%),
+    radial-gradient(at 10% 12%, hsla(47, 45%, 43%, 0.19) 0px, transparent 50%),
+    radial-gradient(at 12% 62%, hsl(39.29deg 66.2% 19.04% / 25%) 0px, transparent 50%),
+    radial-gradient(at 47% 60%, hsl(38.08deg 65.27% 22.96% / 5%) 0px, transparent 50%),
+    radial-gradient(at 85% 2%, hsl(53.13deg 27.76% 43.26% / 50%) 0px, transparent 50%),
+    radial-gradient(at 89% 56%, hsl(50.37deg 19.66% 25.13% / 79%) 0px, transparent 50%) !important;
+    */
+}
+.theme--dark.v-chip:not(.v-chip--active) {
+    background: #5e4c4c82;
+}
+.v-alert--text:before {
+    border-radius: 10px;
+}
+.v-dialog.v-dialog--active {
+    border-radius: 15px;
+}
+.v-list.fill-height.v-sheet.theme--dark.v-list--dense {
+    background: transparent !important;
+}
+button.font-weight-bold.btnHomeAxis.btnGroup.v-btn.v-btn--disabled.v-btn--has-bg.theme--dark.v-size--default,
+button.font-weight-bold.btnHomeAxis.btnGroup.v-btn.v-btn--is-elevated.v-btn--has-bg.theme--dark.v-size--default.warning{
+    min-width: 80px !important;
+}
+.col-12.col-sm-6.col-md-4.col path {
+    stroke: none;
+    filter: drop-shadow(0px 0px 2px #00000069)
+}
+.filesGcodeCard.v-card.v-card--flat.v-sheet.theme--dark {
+    background: none !important;
+    box-shadow: none !important;
+}
+.col-3.pa-0.col {
+    font-size: 0.8rem;
+}
+.v-tabs--fixed-tabs>.v-tabs-bar .v-tab {
+    width: auto;
+}
+:root {
+    --v-warning-base: #cf8e1c;
+    --v-error-base: #b53939;
+    --v-success-base: #4f8f4a;
+    --v-secondary-base: #69507c;
+}
+
+/* box-color */
+.v-sheet.v-card {
+    border-radius: 10px !important;
+    background-color: #28282860 !important;
+    box-shadow: 0 3px 10px -2px #0003, 0 2px 2px #00000024, 0 1px 8px #0000001f !important;
+}
+.theme--dark.v-data-table {
+    background-color: transparent;
+}
+.theme--dark.v-tabs-items {
+    background-color: transparent !important;
+}
+/* sub-header */
+.theme--dark.v-toolbar.v-sheet {
+    background-color: #28282850;
+}
+.expanded header.v-toolbar {
+    border-bottom-left-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+}
+/* main-header */
+.theme--dark.v-app-bar.v-toolbar.v-sheet {
+    background-color: #28282880!important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 3px 10px -2px #0003, 0 2px 2px #00000024, 0 1px 8px #0000001f !important;
+}
+/* sidebar */
+.theme--dark.v-navigation-drawer {
+    background-color: #28282880 !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.v-navigation-drawer__image {
+    display: none;
+}
+.theme--dark.v-data-table>.v-data-table__wrapper>table>tbody>tr:hover:not(.v-data-table__expanded__content):not(.v-data-table__empty-wrapper) {
+    background: #3f3f3f80;
+}
+.v-list.v-sheet.theme--dark.v-list--dense {
+    background-color: #28282840 !important;
+}
+.theme--dark.v-btn.v-btn--has-bg {
+    background-color: #00000040;
+}
+.theme--dark.v-tabs>.v-tabs-bar {
+    background-color: #12121280;
+}
+.v-menu__content.theme--dark.menuable__content__active {
+    border-radius: 10px !important;
+    border: solid 1px;
+    border-color: #56565661;
+}
+.theme--dark.v-list {
+    background: #23232330;
+}
+.v-btn--is-elevated {
+    box-shadow: none !important;
+}
+.v-btn {
+    border-radius: 6px;
+}
+.row.my-2.mx-0.my-2.mx-0 {
+    background-color: #28282880 !important;
+    border-radius: 8px;
+}
+.v-text-field fieldset, .v-text-field .v-input__control, .v-text-field .v-input__slot {
+    border-radius: 8px;
+}
+.theme--dark.v-text-field--solo>.v-input__control>.v-input__slot {
+    background: #28282860;
+}
+
+.v-application .error--text {
+    color: #ff0000 !important;
+}
+
+.v-application .grey.darken-3,
+.theme--dark.v-btn-toggle:not(.v-btn-toggle--group),
+span.webcamFpsOutput {
+    background-color: #28282890 !important;
+}
+.theme--dark.v-data-table>.v-data-table__wrapper>table>tbody>tr:hover:not(.v-data-table__expanded__content):not(.v-data-table__empty-wrapper) {
+    background: #28282840;
+}
+.v-card.v-sheet.theme--dark.panel.status-panel.mb-3.mb-md-6 {
+    background: #28282860 !important;
+}
+.filesGcodeCard.v-card.v-card--flat.v-sheet.theme--dark {
+    border-radius: 0 !important;
+}
+canvas.viewer {
+    opacity: 0.5;
+    border-radius: 8px;
+}
+img.webcamImage {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+span.webcamFpsOutput {
+    border-bottom-right-radius: 10px;
+}
+x-vue-echarts.tempchart.echarts {
+    width: 95%;
+}
+.px-2.col-auto.d-flex.flex-column.justify-center.align-center.col {
+    padding-left: 20px !important;
+}
+.px-2.col-auto.d-flex.justify-center.align-center.col {
+    padding-left: 20px !important;
+}
+.v-avatar.v-list-item__avatar.rounded-0.v-avatar--tile {
+    filter: drop-shadow(0px 0px 8px #3f3f3f);
+}
+.cm-gutters {
+    border-top-left-radius: 8px;
+}
+.cm-lineNumbers .cm-gutterElement {
+    margin-left: 4px;
+}
+.cm-gutterElement.cm-activeLineGutter {
+    background-color: #6a9955;
+    margin: 0;
+    color: white;
+    font-weight: 900;
+}
+.codeview {
+    border-radius: 8px;
+}
+.ͼ2 .cm-gutters {
+    border-right: none;
+    background: none;
+    color: #c3c3c3;
+}
+nav.v-navigation-drawer.v-navigation-drawer--clipped.v-navigation-drawer--fixed.v-navigation-drawer--mini-variant.v-navigation-drawer--open.theme--dark {
+    box-shadow: 2px 2px 15px 0px rgba(0,0,0,0.65);
+}
+.theme--dark.v-chip:not(.v-chip--active) {
+    background: #555;
+    margin: 2px 2px 2px 2px;
+}
+.v-list-item--link:before {
+    background-color: #000000fc;
+    border-bottom: solid 1px;
+    border-top: solid 1px;
+    border-color: #818181;
+    box-shadow: inset 0 0 20px -1px #000000;
+}
+.v-input--selection-controls__input:hover .v-input--selection-controls__ripple:before {
+    display: none;
+}
+.theme--dark.v-list-item:hover:before {
+    opacity: .18;
+}
