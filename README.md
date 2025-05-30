@@ -11,7 +11,7 @@ Antes de instalar este plugin, asegurate de tener:
 
 ✅ [Klipper](https://www.klipper3d.org/)  
 ✅ [KlipperScreen](https://github.com/jordanruthe/KlipperScreen)  
-✅ [Mainsail](https://mainsail.io/)
+✅ [Mainsail](https://docs.mainsail.xyz/)
 
 🔄 Además, se requiere tener **cuatro instancias** de Klipper y Mainsail correctamente configuradas y funcionando.
 
@@ -26,3 +26,12 @@ cd KutterKlipper_cfg
 chmod +x install.sh
 ./install.sh
 ```
+---
+
+## 🛠️ Soporte y mantenimiento
+Este proyecto está en constante evolución. Si encontrás errores o tenés ideas de mejora, podés abrir un [issue aquí](https://github.com/Kuttecraft/KutterKlipper_cfg/issues).
+
+---
+
+## 💡 Autor
+Creado con ❤️ por Kuttecraft.
