@@ -19,13 +19,25 @@ Antes de instalar este plugin, asegurate de tener:
 
 ## 🚀 Instalación
 
-1. Clona el repositorio:
+1. Clona el repositorio y ejecuta el script de instalación:
 ```bash
 git clone https://github.com/Kuttecraft/KutterKlipper_cfg.git
 cd KutterKlipper_cfg
 chmod +x install.sh
 ./install.sh
 ```
+
+2. Para mantenerlo actualizado, agrega el script de actualización a moonraker.conf:
+```bash
+[update_manager KutterKlipper_cfg]
+type: git_repo
+install_script: /home/kutter/KutterKlipper_cfg/install.sh
+primary_branch: main
+path: ~/KutterKlipper_cfg
+origin: https://github.com/Kuttecraft/KutterKlipper_cfg.git
+managed_services: klipper
+```
+
 ---
 
 ## 🛠️ Soporte y mantenimiento
