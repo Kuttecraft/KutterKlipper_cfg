@@ -1,5 +1,6 @@
 /* Colorized theme created by Alfredo Monclus 2021 */
 /* Using solarized colors */
+/* 008afc */
 @define-color solarized-base0 #839496;
 @define-color solarized-base1 #93a1a1;
 @define-color solarized-base2 #eee8d5;
@@ -13,9 +14,10 @@
 @define-color solarized-red #dc322f;
 @define-color solarized-magenta #d33682;
 @define-color solarized-violet #6c71c4;
-@define-color solarized-blue #268bd2;
+@define-color solarized-blue 2#268bd2;
 @define-color solarized-cyan #2aa198;
 @define-color solarized-green #859900;
+@define-color solarized-blue2 #fc0000; 
 
 * {
     color: @solarized-base3;
@@ -46,25 +48,25 @@ button:active {
 
 button.color1 {
     background-color: @solarized-base02;
-    border-bottom-color: #008afc;
+    border-bottom-color: @solarized-blue2;
     border-radius: 1em;
 }
 
 button.color2 {
     background-color: @solarized-base02;
-    border-bottom-color: #008afc;
+    border-bottom-color: @solarized-blue2;
     border-radius: 1em;
 }
 
 button.color3 {
     background-color: @solarized-base02;
-    border-bottom-color: #008afc;
+    border-bottom-color: @solarized-blue2;
     border-radius: 1em;
 }
 
 button.color4 {
     background-color: @solarized-base02;
-    border-bottom-color: #008afc;
+    border-bottom-color: @solarized-blue2;
     border-radius: 1em;
 }
 

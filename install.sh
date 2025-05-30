@@ -4,6 +4,7 @@ set -e
 
 SOURCE_IMPRESORAS="$HOME/KutterKlipper_cfg/IMPRESORAS"
 SOURCE_THEME="$HOME/KutterKlipper_cfg/theme/.theme"
+SOURCE_THEME_KUTTERCRAFT="$HOME/KutterKlipper_cfg/theme/kuttercraft"
 MACROS_SRC="$HOME/KutterKlipper_cfg/macros_kuttercraft.cfg"
 COMANDO_SRC="$HOME/KutterKlipper_cfg/comando_sistema.cfg"
 KLIPPER_CONF_SRC="$HOME/KutterKlipper_cfg/KlipperScreen.conf"
@@ -17,6 +18,11 @@ fi
 
 if [ ! -d "$SOURCE_THEME" ]; then
     echo "[ERROR] La carpeta $SOURCE_THEME no existe. Abortando."
+    exit 1
+fi
+
+if [ ! -d "$SOURCE_THEME_KUTTERCRAFT" ]; then
+    echo "[ERROR] La carpeta $SOURCE_THEME_KUTTERCRAFT no existe. Abortando."
     exit 1
 fi
 
@@ -59,6 +65,21 @@ for BASE in "${BASES[@]}"; do
   echo "[INFO] Creando enlace: $DEST_THEME → $SOURCE_THEME"
   ln -s "$SOURCE_THEME" "$DEST_THEME"
 done
+
+echo "[INFO] Reemplazando carpetas 'kuttercraft' con enlaces simbólicos..."
+
+DEST_KUTTERCRAFT="$HOME/KlipperScreen/styles/kuttercraft"
+  
+if [ -d "$DEST_KUTTERCRAFT" ] || [ -L "$DEST_KUTTERCRAFT" ]; then
+  echo "[INFO] Eliminando carpeta existente: $DEST_KUTTERCRAFT"
+  rm -rf "$DEST_KUTTERCRAFT"
+fi
+
+echo "[INFO] Copiando $SOURCE_THEME_KUTTERCRAFT → $DEST_KUTTERCRAFT"
+cp -r "$SOURCE_THEME_KUTTERCRAFT" "$DEST_KUTTERCRAFT"
+chmod -R 644 "$DEST_KUTTERCRAFT"
+
+
 
 echo "[INFO] Reemplazando archivos 'macros_kuttercraft.cfg'..."
 for BASE in "${BASES[@]}"; do
