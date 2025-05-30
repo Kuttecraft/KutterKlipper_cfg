@@ -5,6 +5,8 @@ set -e
 SOURCE_IMPRESORAS="$HOME/KutterKlipper_cfg/IMPRESORAS"
 MACROS_SRC="$HOME/KutterKlipper_cfg/macros_kuttercraft.cfg"
 COMANDO_SRC="$HOME/KutterKlipper_cfg/comando_sistema.cfg"
+KLIPPER_CONF_SRC="$SOURCE_IMPRESORAS/KlipperScreen.conf"
+KLIPPER_CONF_DEST="/home/kutter/.config/KlipperScreen/KlipperScreen.conf"
 
 # Verificar que las fuentes existen
 if [ ! -d "$SOURCE_IMPRESORAS" ]; then
@@ -64,4 +66,31 @@ for BASE in "${BASES[@]}"; do
   ln -s "$COMANDO_SRC" "$DEST_COMANDO"
 done
 
-echo "[OK] Todos los enlaces y archivos fueron aplicados correctamente."
+# KlipperScreen.conf principal
+if [ -f "$KLIPPER_CONF_SRC" ]; then
+  echo "[INFO] Reemplazando configuración principal de KlipperScreen..."
+
+  if [ -e "$KLIPPER_CONF_DEST" ] || [ -L "$KLIPPER_CONF_DEST" ]; then
+    echo "[INFO] Eliminando archivo existente: $KLIPPER_CONF_DEST"
+    rm -f "$KLIPPER_CONF_DEST"
+  fi
+
+  echo "[INFO] Creando enlace: $KLIPPER_CONF_DEST → $KLIPPER_CONF_SRC"
+  ln -s "$KLIPPER_CONF_SRC" "$KLIPPER_CONF_DEST"
+
+  # Enlazar también en cada printer_X_data/config/
+  echo "[INFO] Enlazando KlipperScreen.conf en carpetas de impresoras..."
+  for BASE in "${BASES[@]}"; do
+    DEST_KSC="$BASE/KlipperScreen.conf"
+    if [ -e "$DEST_KSC" ] || [ -L "$DEST_KSC" ]; then
+      echo "[INFO] Eliminando archivo existente: $DEST_KSC"
+      rm -f "$DEST_KSC"
+    fi
+    echo "[INFO] Enlazando $DEST_KSC → $KLIPPER_CONF_SRC"
+    ln -s "$KLIPPER_CONF_SRC" "$DEST_KSC"
+  done
+else
+  echo "[WARN] KlipperScreen.conf no encontrado en $KLIPPER_CONF_SRC — se omite."
+fi
+
+echo "[✅] Todos los enlaces y archivos fueron aplicados correctamente."
