@@ -46,19 +46,19 @@ button:active {
 
 button.color1 {
     background-color: @solarized-base02;
-    border-bottom-color: #008afc;
+    border-bottom-color: #eb4034;
     border-radius: 1em;
 }
 
 button.color2 {
     background-color: @solarized-base02;
-    border-bottom-color: #008afc;
+    border-bottom-color: #eb4034;
     border-radius: 1em;
 }
 
 button.color3 {
     background-color: @solarized-base02;
-    border-bottom-color: #008afc;
+    border-bottom-color: #eb4034;
     border-radius: 1em;
 }
 
