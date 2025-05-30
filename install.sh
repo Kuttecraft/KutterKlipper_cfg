@@ -2,7 +2,7 @@
 
 set -e
 
-SOURCE_IMPRESORAS="$HOME/KutterKlipper_cfg/impresoras"
+SOURCE_IMPRESORAS="$HOME/KutterKlipper_cfg/IMPRESORAS"
 MACROS_SRC="$HOME/KutterKlipper_cfg/macros_kuttercraft.cfg"
 COMANDO_SRC="$HOME/KutterKlipper_cfg/comando_sistema.cfg"
 
