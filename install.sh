@@ -3,6 +3,7 @@
 set -e
 
 SOURCE_IMPRESORAS="$HOME/KutterKlipper_cfg/IMPRESORAS"
+SOURCE_THEME="$HOME/KutterKlipper_cfg/theme/.theme"
 MACROS_SRC="$HOME/KutterKlipper_cfg/macros_kuttercraft.cfg"
 COMANDO_SRC="$HOME/KutterKlipper_cfg/comando_sistema.cfg"
 KLIPPER_CONF_SRC="$HOME/KutterKlipper_cfg/KlipperScreen.conf"
@@ -11,6 +12,11 @@ KLIPPER_CONF_DEST="$HOME/.config/KlipperScreen/KlipperScreen.conf"
 # Verificar que las fuentes existen
 if [ ! -d "$SOURCE_IMPRESORAS" ]; then
     echo "[ERROR] La carpeta $SOURCE_IMPRESORAS no existe. Abortando."
+    exit 1
+fi
+
+if [ ! -d "$SOURCE_THEME" ]; then
+    echo "[ERROR] La carpeta $SOURCE_THEME no existe. Abortando."
     exit 1
 fi
 
@@ -41,6 +47,17 @@ for BASE in "${BASES[@]}"; do
   fi
   echo "[INFO] Creando enlace: $DEST_IMPRESORAS → $SOURCE_IMPRESORAS"
   ln -s "$SOURCE_IMPRESORAS" "$DEST_IMPRESORAS"
+done
+
+echo "[INFO] Reemplazando carpetas '.theme' con enlaces simbólicos..."
+for BASE in "${BASES[@]}"; do
+  DEST_THEME="$BASE/.theme"
+  if [ -e "$DEST_THEME" ] || [ -L "$DEST_THEME" ]; then
+    echo "[INFO] Eliminando: $DEST_THEME"
+    rm -rf "$DEST_THEME"
+  fi
+  echo "[INFO] Creando enlace: $DEST_THEME → $SOURCE_THEME"
+  ln -s "$SOURCE_THEME" "$DEST_THEME"
 done
 
 echo "[INFO] Reemplazando archivos 'macros_kuttercraft.cfg'..."
