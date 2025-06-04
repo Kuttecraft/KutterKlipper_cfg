@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <!-- Generator: Adobe Illustrator 29.5.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 141)  -->
+  <defs>
+    <style>
+      .st0 {
+        font-family: Montserrat-ExtraBold, Montserrat;
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      .st0, .st1 {
+        fill: #e2e2e2;
+      }
+
+      .st1 {
+        display: none;
+      }
+    </style>
+  </defs>
+  <g id="svg892" inkscape:version="1.1 (c4e8f9ed74, 2021-05-24)" sodipodi:docname="z-tilt.svg">
+    <sodipodi:namedview id="namedview894" bordercolor="#ffffff" borderopacity="1" inkscape:current-layer="svg892" inkscape:cx="12" inkscape:cy="12.019231" inkscape:pagecheckerboard="1" inkscape:pageopacity="0" inkscape:pageshadow="0" inkscape:window-height="826" inkscape:window-maximized="1" inkscape:window-width="1600" inkscape:window-x="0" inkscape:window-y="0" inkscape:zoom="26" pagecolor="#505050" showgrid="false"/>
+    <path id="path890" class="st1" d="M14,8h-3v6h-5v-6h-3l5.5-6,5.5,6M15.5,22l5.5-6h-3v-6h-5v6h-3l5.5,6Z"/>
+    <text class="st0" transform="translate(1.54 19.09)"><tspan x="0" y="0">IP</tspan></text>
+  </g>
+</svg>
