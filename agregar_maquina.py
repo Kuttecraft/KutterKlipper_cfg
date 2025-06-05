@@ -13,7 +13,7 @@ class Panel(ScreenPanel):
         self.buttons = {}
 
         # Crear botón con estilo
-        self.buttons["agregar_maquina"] = self._gtk.Button("home", _("Ejecutar Script"), "color4")
+        self.buttons["agregar_maquina"] = self._gtk.Button("settings", _("Ejecutar Script"), "color4")
         self.buttons["agregar_maquina"].connect("clicked", self.ejecutar_script)
 
         # Tamaño y expansión
