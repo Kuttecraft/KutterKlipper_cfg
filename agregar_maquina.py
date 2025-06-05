@@ -59,13 +59,13 @@ class Panel(ScreenPanel):
         self._run_script("/home/kutter/klipper/add_maquina.sh")
 
     def ejecutar_script_actualizar(self, widget):
-        self._run_script("/home/kutter/klipper/update_firmware.sh")
+        self._run_script("/home/kutter/klipper/add_maquina2.sh")
 
     def ejecutar_script_reiniciar(self, widget):
-        self._run_script("/home/kutter/klipper/restart_service.sh")
+        self._run_script("/home/kutter/klipper/add_maquina3.sh")
 
     def ejecutar_script_config(self, widget):
-        self._run_script("/home/kutter/klipper/extra_config.sh")
+        self._run_script("/home/kutter/klipper/add_maquina4.sh")
 
     def _run_script(self, path):
         try:
