@@ -14,28 +14,28 @@ class Panel(ScreenPanel):
 
         # Primer botón
         self.buttons["agregar_maquina"] = self._gtk.Button("mas", _("Agregar Máquina"), "color4")
-        self.buttons["agregar_maquina"].set_size_request(300, 300)
+        #self.buttons["agregar_maquina"].set_size_request(300, 300)
         self.buttons["agregar_maquina"].set_hexpand(True)
         self.buttons["agregar_maquina"].set_vexpand(True)
         self.buttons["agregar_maquina"].connect("clicked", self.ejecutar_script_agregar)
 
         # Segundo botón
         self.buttons["actualizar_firmware"] = self._gtk.Button("mas", _("Actualizar Firmware"), "color2")
-        self.buttons["actualizar_firmware"].set_size_request(300, 300)
+        #self.buttons["actualizar_firmware"].set_size_request(300, 300)
         self.buttons["actualizar_firmware"].set_hexpand(True)
         self.buttons["actualizar_firmware"].set_vexpand(True)
         self.buttons["actualizar_firmware"].connect("clicked", self.ejecutar_script_actualizar)
 
         # Tercer botón
         self.buttons["reiniciar_servicio"] = self._gtk.Button("mas", _("Reiniciar Servicio"), "color1")
-        self.buttons["reiniciar_servicio"].set_size_request(300, 300)
+        #self.buttons["reiniciar_servicio"].set_size_request(300, 300)
         self.buttons["reiniciar_servicio"].set_hexpand(True)
         self.buttons["reiniciar_servicio"].set_vexpand(True)
         self.buttons["reiniciar_servicio"].connect("clicked", self.ejecutar_script_reiniciar)
 
         # Cuarto botón
         self.buttons["config_extra"] = self._gtk.Button("mas", _("Config. Extra"), "color3")
-        self.buttons["config_extra"].set_size_request(300, 300)
+        #self.buttons["config_extra"].set_size_request(300, 300)
         self.buttons["config_extra"].set_hexpand(True)
         self.buttons["config_extra"].set_vexpand(True)
         self.buttons["config_extra"].connect("clicked", self.ejecutar_script_config)
