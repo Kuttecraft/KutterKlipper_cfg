@@ -128,4 +128,25 @@ else
   echo "[WARN] KlipperScreen.conf no encontrado en $KLIPPER_CONF_SRC — se omite."
 fi
 
+# Copiar y reemplazar agregar_maquina.py
+AGREGAR_MAQUINA_SRC="$(pwd)/agregar_maquina.py"
+AGREGAR_MAQUINA_DEST="$HOME/KlipperScreen/panels/agregar_maquina.py"
+
+echo "[INFO] Copiando agregar_maquina.py a $AGREGAR_MAQUINA_DEST..."
+
+if [ ! -f "$AGREGAR_MAQUINA_SRC" ]; then
+    echo "[ERROR] No se encontró el archivo agregar_maquina.py en el directorio actual. Abortando."
+    exit 1
+fi
+
+if [ -f "$AGREGAR_MAQUINA_DEST" ]; then
+    echo "[INFO] Eliminando archivo existente: $AGREGAR_MAQUINA_DEST"
+    rm -f "$AGREGAR_MAQUINA_DEST"
+fi
+
+cp "$AGREGAR_MAQUINA_SRC" "$AGREGAR_MAQUINA_DEST"
+chmod 644 "$AGREGAR_MAQUINA_DEST"
+echo "[INFO] Archivo agregar_maquina.py copiado exitosamente."
+
+
 echo "[✅] Todos los enlaces y archivos fueron aplicados correctamente."
